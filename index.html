@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Nepal</title>
+    <title>About Me - Norma Rai</title>
     <style>
         /* General Styling */
         * {
@@ -18,11 +18,19 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        h1, h2 {
-            color: #003893; /* Blue from Nepal's flag */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #003893;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
-        p {
-            color: #475569;
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
         }
         section {
             max-width: 900px;
@@ -39,231 +47,87 @@
             opacity: 1;
             transform: translateY(0);
         }
-        img {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        section h2 {
+            color: #003893;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        section p {
+            color: #475569;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        .hobbies, .shows {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .hobbies div, .shows div {
+            flex: 1 1 calc(50% - 20px);
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .hobbies div:hover, .shows div:hover {
+            background: #e5e7eb;
+            transform: scale(1.05);
+            transition: all 0.3s ease-in-out;
         }
         footer {
             text-align: center;
             padding: 20px;
             background: #003893;
-            color: #ffffff;
+            color: #fff;
             margin-top: 40px;
         }
-
-        /* Card Matching Game */
-        .game-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 900px;
-            margin: 40px auto;
-        }
-        .card {
-            background: #003893; /* Blue for hidden cards */
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-radius: 12px;
-            cursor: pointer;
+        footer p {
             font-size: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            position: relative;
-            height: 100px;
-        }
-        .card .front, .card .back {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-        }
-        .card .front {
-            background: #e63946; /* Red for revealed cards */
-            color: #ffffff;
-            transform: rotateY(180deg);
-        }
-        .card .back {
-            background: #003893; /* Blue for hidden cards */
-            color: #ffffff;
-        }
-        .card.flipped .front {
-            transform: rotateY(0);
-        }
-        .card.flipped .back {
-            transform: rotateY(180deg);
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .card.matched {
-            background: #475569; /* Gray for matched cards */
-            cursor: default;
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header style="background: #003893; color: white; padding: 40px 20px; text-align: center;">
-        <h1>Welcome to Nepal</h1>
-        <p>The Land of the Himalayas</p>
+    <header>
+        <h1>About Me</h1>
+        <p>Hi, I'm Norma Rai. Welcome to my personal page!</p>
     </header>
 
-    <!-- Culture Section -->
-    <section>
-        <h2>Nepalese Culture</h2>
-        <p>
-            Nepal is a melting pot of diverse cultures, traditions, and festivals. The country is home to over 120 ethnic groups, each with its own unique customs and practices. 
-            From the colorful festivals like Dashain and Tihar to the traditional dances like the Lakhey dance, Nepal's culture is vibrant and deeply rooted in its history.
-        </p>
+    <section class="intro">
+        <h2>Who Am I?</h2>
+        <p>I'm Norma Rai, a proud Nepali who loves exploring creativity and learning new things. I aspire to become a coder in the future and make a positive impact through technology.</p>
     </section>
 
-    <section>
-        <h2>Festivals and Traditions</h2>
-        <p>
-            Festivals in Nepal are a grand celebration of life and spirituality. Dashain, the longest and most celebrated festival, symbolizes the victory of good over evil. 
-            Similarly, Tihar, the festival of lights, honors animals like crows, dogs, and cows, showcasing the deep connection between humans and nature in Nepalese culture.
-        </p>
-    </section>
-
-    <section>
-        <h2>Art and Architecture</h2>
-        <p>
-            Nepal is renowned for its intricate wood carvings, stone sculptures, and metalwork. The pagoda-style temples, stupas like Swayambhunath and Boudhanath, 
-            and the ancient palaces of Kathmandu Valley are a testament to the country's rich artistic heritage.
-        </p>
-    </section>
-
-    <!-- Nature Section -->
-    <section>
-        <h2>The Beauty of Nepal's Nature</h2>
-        <p>
-            Nepal is blessed with breathtaking natural beauty. From the towering peaks of the Himalayas, including Mount Everest, to the serene lakes of Pokhara and the lush jungles of Chitwan, 
-            the country's diverse landscapes are a paradise for nature lovers. The Annapurna Circuit and Everest Base Camp treks are world-famous for their stunning views and challenging trails.
-        </p>
-    </section>
-
-    <!-- History and Present Day Section -->
-    <section>
-        <h2>History of Nepal</h2>
-        <p>
-            Nepal has a rich history that dates back thousands of years. It was once a collection of small kingdoms, with the Kathmandu Valley serving as a cultural and political hub. 
-            The unification of Nepal in the 18th century by King Prithvi Narayan Shah marked the beginning of the modern nation.
-        </p>
-    </section>
-
-    <section>
-        <h2>Present Day Nepal</h2>
-        <p>
-            Today, Nepal is a democratic republic that embraces its cultural heritage while striving for modernization. Tourism, agriculture, and remittances are the backbone of its economy. 
-            Despite challenges, the resilience and hospitality of the Nepalese people continue to inspire visitors from around the world.
-        </p>
-    </section>
-
-    <!-- Card Matching Game -->
-    <section>
-        <h2>Test Your Knowledge: Card Matching Game</h2>
-        <div class="game-container">
-            <div class="card" data-pair="1">
-                <div class="front">Dashain</div>
-                <div class="back"></div>
-            </div>
-            <div class="card" data-pair="2">
-                <div class="front">Mount Everest</div>
-                <div class="back"></div>
-            </div>
-            <div class="card" data-pair="3">
-                <div class="front">Pagoda</div>
-                <div class="back"></div>
-            </div>
-            <div class="card" data-pair="4">
-                <div class="front">Tihar</div>
-                <div class="back"></div>
-            </div>
-            <div class="card" data-pair="1">
-                <div class="front">Festival of Victory</div>
-                <div class="back"></div>
-            </div>
-            <div class="card" data-pair="2">
-                <div class="front">Highest Peak</div>
-                <div class="back"></div>
-            </div>
-            <div class="card" data-pair="3">
-                <div class="front">Temple Style</div>
-                <div class="back"></div>
-            </div>
-            <div class="card" data-pair="4">
-                <div class="front">Festival of Lights</div>
-                <div class="back"></div>
-            </div>
+    <section class="shows">
+        <h2>Favorite Shows</h2>
+        <div>
+            <h3>Death Note</h3>
+            <p>A thrilling anime that keeps you on the edge of your seat.</p>
+        </div>
+        <div>
+            <h3>Avatar: The Last Airbender</h3>
+            <p>An inspiring story of balance, friendship, and adventure.</p>
+        </div>
+        <div>
+            <h3>Pokemon</h3>
+            <p>A nostalgic journey of friendship and battling to be the best.</p>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="hobbies">
+        <h2>Hobbies</h2>
+        <div>
+            <h3>Drawing</h3>
+            <p>I love expressing my creativity through art and illustrations.</p>
+        </div>
+        <div>
+            <h3>Swimming</h3>
+            <p>Swimming helps me relax and stay healthy while enjoying the water.</p>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2023 Explore Nepal. All rights reserved.</p>
+        <p>Thank you for visiting my page! Let's connect and create something amazing together.</p>
     </footer>
-
-    <script>
-        // Fade-in animation on scroll
-        const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Card Matching Game Logic
-        const cards = document.querySelectorAll('.card');
-        let firstCard = null;
-        let secondCard = null;
-
-        // Add flip sound
-        const flipSound = new Audio('https://www.soundjay.com/button/beep-07.wav');
-
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                if (card.classList.contains('flipped') || card.classList.contains('matched') || card === firstCard) return;
-
-                // Play flip sound
-                flipSound.play();
-
-                card.classList.add('flipped');
-                if (!firstCard) {
-                    firstCard = card;
-                } else {
-                    secondCard = card;
-                    if (firstCard.dataset.pair === secondCard.dataset.pair) {
-                        firstCard.classList.add('matched');
-                        secondCard.classList.add('matched');
-                        firstCard = null;
-                        secondCard = null;
-                    } else {
-                        setTimeout(() => {
-                            firstCard.classList.remove('flipped');
-                            secondCard.classList.remove('flipped');
-                            firstCard = null;
-                            secondCard = null;
-                        }, 1000);
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 </html>
