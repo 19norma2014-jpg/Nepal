@@ -14,24 +14,63 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: #f3f4f6;
-            color: #333;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #6a11cb, #2575fc, #ff6ec4);
+            color: #fff;
             overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Floating Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a.active, .navbar a:hover {
+            background: linear-gradient(135deg, #ff6ec4, #6a11cb);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         /* Hero Section */
         header {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
-            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 80px 20px;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            background: transparent;
+            position: relative;
+        }
+
+        header .hero-content {
+            max-width: 600px;
         }
 
         header h1 {
             font-size: 3.5rem;
-            font-weight: bold;
             margin-bottom: 20px;
         }
 
@@ -40,50 +79,60 @@
             margin-bottom: 30px;
         }
 
-        header button {
-            background: #fff;
-            color: #6a11cb;
+        header .cta-button {
+            background: linear-gradient(135deg, #ff6ec4, #6a11cb);
+            color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 15px 30px;
             font-size: 1rem;
-            font-weight: bold;
-            border-radius: 25px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease;
         }
 
-        header button:hover {
-            background: #6a11cb;
-            color: #fff;
+        header .cta-button:hover {
+            transform: scale(1.1);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Section Styling */
-        section {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
+        /* About Me Section */
+        #about {
+            padding: 80px 20px;
         }
 
-        section h2 {
-            font-size: 2.5rem;
-            color: #6a11cb;
-            text-align: center;
-            margin-bottom: 30px;
-            position: relative;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 20px;
+            align-items: center;
         }
 
-        section h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: #2575fc;
-            margin: 10px auto 0;
-            border-radius: 2px;
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
         }
 
-        /* Cards for Shows and Hobbies */
+        .profile h2 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+        }
+
+        .profile p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        /* Favorite Shows Section */
+        #shows {
+            padding: 80px 20px;
+        }
+
         .card-container {
             display: flex;
             flex-wrap: wrap;
@@ -92,19 +141,18 @@
         }
 
         .card {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: calc(33.333% - 20px);
-            min-width: 280px;
-            text-align: center;
+            width: 300px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .card img {
@@ -113,109 +161,113 @@
             object-fit: cover;
         }
 
-        .card h3 {
-            font-size: 1.5rem;
-            color: #6a11cb;
-            margin: 15px 0;
+        .card-content {
+            padding: 20px;
+            text-align: center;
         }
 
-        .card p {
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
             font-size: 1rem;
-            color: #475569;
-            padding: 0 15px 20px;
+            color: #ddd;
+        }
+
+        .card-content .tag {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: linear-gradient(135deg, #ff6ec4, #6a11cb);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #fff;
         }
 
         /* Footer */
         footer {
-            background: #6a11cb;
-            color: #fff;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-
-        footer p {
-            font-size: 1rem;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .card {
-                width: calc(50% - 20px);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .card {
-                width: 100%;
-            }
-
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header p {
-                font-size: 1.2rem;
-            }
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
-        <p>Hi, I'm Norma Rai. Welcome to my personal page!</p>
-        <button>Contact Me</button>
+    <!-- Floating Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" class="active">🏠 Home</a></li>
+            <li><a href="#about">👤 About Me</a></li>
+            <li><a href="#shows">🎮 Games</a></li>
+            <li><a href="#favorites">⭐ Favorites</a></li>
+            <li><a href="#contact">📞 Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <div class="hero-content">
+            <h1>Welcome to My World</h1>
+            <p>Hi, I'm Norma Rai. A Nepali dreamer aspiring to become a coder.</p>
+            <button class="cta-button">Contact Me</button>
+        </div>
     </header>
 
-    <section>
-        <h2>Who Am I?</h2>
-        <p style="text-align: center;">I'm Norma Rai, a proud Nepali who loves exploring creativity and learning new things. I aspire to become a coder in the future and make a positive impact through technology.</p>
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="glass-card">
+            <div class="profile">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <h2>Norma Rai</h2>
+                <p>Future Coder | Artist | Swimmer</p>
+            </div>
+            <div class="about-content">
+                <h2>Who Am I?</h2>
+                <p>I'm Norma Rai, a proud Nepali who loves exploring creativity and learning new things. I aspire to become a coder in the future and make a positive impact through technology.</p>
+            </div>
+        </div>
     </section>
 
-    <section>
+    <!-- Favorite Shows Section -->
+    <section id="shows">
         <h2>Favorite Shows</h2>
         <div class="card-container">
             <div class="card">
-                <img src="https://via.placeholder.com/300x180" alt="Death Note">
-                <h3>Death Note</h3>
-                <p>A thrilling anime that keeps you on the edge of your seat.</p>
+                <img src="https://www.imdb.com/title/tt0877057/" alt="Death Note">
+                <div class="card-content">
+                    <h3>Death Note</h3>
+                    <p>A thrilling anime that keeps you on the edge of your seat.</p>
+                    <span class="tag">Anime</span>
+                </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/300x180" alt="Avatar: The Last Airbender">
-                <h3>Avatar: The Last Airbender</h3>
-                <p>An inspiring story of balance, friendship, and adventure.</p>
+                <img src="https://www.amazon.com/Avatar-Last-Airbender-Art-Animated/dp/1595825045" alt="Avatar: The Last Airbender">
+                <div class="card-content">
+                    <h3>Avatar: The Last Airbender</h3>
+                    <p>An inspiring story of balance, friendship, and adventure.</p>
+                    <span class="tag">Animation</span>
+                </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/300x180" alt="Pokemon">
-                <h3>Pokemon</h3>
-                <p>A nostalgic journey of friendship and battling to be the best.</p>
+                <img src="https://nintendo.fandom.com/wiki/Pok%C3%A9mon_the_Series" alt="Pokemon">
+                <div class="card-content">
+                    <h3>Pokemon</h3>
+                    <p>A nostalgic journey of friendship and battling to be the best.</p>
+                    <span class="tag">Anime</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Hobbies</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="https://via.placeholder.com/300x180" alt="Drawing">
-                <h3>Drawing</h3>
-                <p>I love expressing my creativity through art and illustrations.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x180" alt="Swimming">
-                <h3>Swimming</h3>
-                <p>Swimming helps me relax and stay healthy while enjoying the water.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Thank you for visiting my page! <a href="#">Let's connect</a> and create something amazing together.</p>
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Thank you for visiting my page! Let's connect and create something amazing together.</p>
     </footer>
 </body>
 </html>
