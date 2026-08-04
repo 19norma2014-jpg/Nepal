@@ -26,35 +26,31 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 10px;
         }
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         section {
             max-width: 900px;
             margin: 40px auto;
-            padding: 20px;
+            padding: 30px;
             background: #ffffff;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-in-out;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
         section h2 {
             color: #003893;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #003893;
+            display: inline-block;
+            padding-bottom: 5px;
         }
         section p {
             color: #475569;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
         }
         .hobbies, .shows {
@@ -65,15 +61,24 @@
         .hobbies div, .shows div {
             flex: 1 1 calc(50% - 20px);
             background: #f9fafb;
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: all 0.3s ease-in-out;
         }
         .hobbies div:hover, .shows div:hover {
             background: #e5e7eb;
             transform: scale(1.05);
-            transition: all 0.3s ease-in-out;
+        }
+        .hobbies div h3, .shows div h3 {
+            font-size: 1.5rem;
+            color: #003893;
+            margin-bottom: 10px;
+        }
+        .hobbies div p, .shows div p {
+            font-size: 1.1rem;
+            color: #475569;
         }
         footer {
             text-align: center;
