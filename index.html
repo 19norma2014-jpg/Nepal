@@ -5,90 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Norma Rai</title>
     <style>
-        /* General Styling */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to bottom, #f3f4f6, #e5e7eb);
+            background: #f3f4f6;
             color: #333;
             line-height: 1.6;
             overflow-x: hidden;
         }
+
+        /* Hero Section */
         header {
-            text-align: center;
-            padding: 40px 20px;
-            background: #003893;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 80px 20px;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
+
         header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
+
         header p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
         }
+
+        header button {
+            background: #fff;
+            color: #6a11cb;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header button:hover {
+            background: #6a11cb;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
         section {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 40px auto;
-            padding: 30px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
+
         section h2 {
-            color: #003893;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #003893;
-            display: inline-block;
-            padding-bottom: 5px;
+            font-size: 2.5rem;
+            color: #6a11cb;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
         }
-        section p {
-            color: #475569;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2575fc;
+            margin: 10px auto 0;
+            border-radius: 2px;
         }
-        .hobbies, .shows {
+
+        /* Cards for Shows and Hobbies */
+        .card-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
         }
-        .hobbies div, .shows div {
-            flex: 1 1 calc(50% - 20px);
-            background: #f9fafb;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: calc(33.333% - 20px);
+            min-width: 280px;
             text-align: center;
-            transition: all 0.3s ease-in-out;
         }
-        .hobbies div:hover, .shows div:hover {
-            background: #e5e7eb;
-            transform: scale(1.05);
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
-        .hobbies div h3, .shows div h3 {
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h3 {
             font-size: 1.5rem;
-            color: #003893;
-            margin-bottom: 10px;
+            color: #6a11cb;
+            margin: 15px 0;
         }
-        .hobbies div p, .shows div p {
-            font-size: 1.1rem;
+
+        .card p {
+            font-size: 1rem;
             color: #475569;
+            padding: 0 15px 20px;
         }
+
+        /* Footer */
         footer {
+            background: #6a11cb;
+            color: #fff;
             text-align: center;
             padding: 20px;
-            background: #003893;
-            color: #fff;
             margin-top: 40px;
         }
+
         footer p {
             font-size: 1rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -96,43 +169,53 @@
     <header>
         <h1>About Me</h1>
         <p>Hi, I'm Norma Rai. Welcome to my personal page!</p>
+        <button>Contact Me</button>
     </header>
 
-    <section class="intro">
+    <section>
         <h2>Who Am I?</h2>
-        <p>I'm Norma Rai, a proud Nepali who loves exploring creativity and learning new things. I aspire to become a coder in the future and make a positive impact through technology.</p>
+        <p style="text-align: center;">I'm Norma Rai, a proud Nepali who loves exploring creativity and learning new things. I aspire to become a coder in the future and make a positive impact through technology.</p>
     </section>
 
-    <section class="shows">
+    <section>
         <h2>Favorite Shows</h2>
-        <div>
-            <h3>Death Note</h3>
-            <p>A thrilling anime that keeps you on the edge of your seat.</p>
-        </div>
-        <div>
-            <h3>Avatar: The Last Airbender</h3>
-            <p>An inspiring story of balance, friendship, and adventure.</p>
-        </div>
-        <div>
-            <h3>Pokemon</h3>
-            <p>A nostalgic journey of friendship and battling to be the best.</p>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Death Note">
+                <h3>Death Note</h3>
+                <p>A thrilling anime that keeps you on the edge of your seat.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Avatar: The Last Airbender">
+                <h3>Avatar: The Last Airbender</h3>
+                <p>An inspiring story of balance, friendship, and adventure.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Pokemon">
+                <h3>Pokemon</h3>
+                <p>A nostalgic journey of friendship and battling to be the best.</p>
+            </div>
         </div>
     </section>
 
-    <section class="hobbies">
+    <section>
         <h2>Hobbies</h2>
-        <div>
-            <h3>Drawing</h3>
-            <p>I love expressing my creativity through art and illustrations.</p>
-        </div>
-        <div>
-            <h3>Swimming</h3>
-            <p>Swimming helps me relax and stay healthy while enjoying the water.</p>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Drawing">
+                <h3>Drawing</h3>
+                <p>I love expressing my creativity through art and illustrations.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Swimming">
+                <h3>Swimming</h3>
+                <p>Swimming helps me relax and stay healthy while enjoying the water.</p>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>Thank you for visiting my page! Let's connect and create something amazing together.</p>
+        <p>Thank you for visiting my page! <a href="#">Let's connect</a> and create something amazing together.</p>
     </footer>
 </body>
 </html>
