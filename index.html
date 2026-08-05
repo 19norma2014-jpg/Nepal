@@ -20,6 +20,50 @@
             scroll-behavior: smooth;
         }
 
+        /* About Me Section */
+        #about {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-bottom: 20px;
+        }
+
+        .profile h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .profile p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
         /* Favorite Shows Section */
         #shows {
             padding: 80px 20px;
@@ -104,6 +148,20 @@
     </style>
 </head>
 <body>
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="glass-card">
+            <div class="profile">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <h2>Norma Rai</h2>
+                <p>Future Coder | Artist | Swimmer</p>
+            </div>
+            <div class="about-content">
+                <p>I'm Norma Rai, a proud Nepali who loves exploring creativity and learning new things. I aspire to become a coder in the future and make a positive impact through technology.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Favorite Shows Section -->
     <section id="shows">
         <h2>Favorite Shows</h2>
