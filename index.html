@@ -1,186 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Norma Rai</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc, #ff6ec4);
-            color: #fff;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        /* Floating Navigation Bar */
-        .navbar {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            padding: 10px 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-
-        .navbar ul {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 30px; /* Ensures buttons are pill-shaped */
-            transition: all 0.3s ease;
-        }
-
-        .navbar a.active {
-            background: linear-gradient(135deg, #ff6ec4, #6a11cb);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .navbar a:hover {
-            background: linear-gradient(135deg, #ff6ec4, #6a11cb);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            color: #fff;
-        }
-
-        /* Hero Section */
-        header {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: transparent;
-            position: relative;
-        }
-
-        header .hero-content {
-            max-width: 600px;
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-        }
-
-        header .cta-button {
-            background: linear-gradient(135deg, #ff6ec4, #6a11cb);
-            color: #fff;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        header .cta-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* About Me Section */
-        #about {
-            padding: 80px 20px;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #fff;
-        }
-
-        .profile h2 {
-            font-size: 1.8rem;
-            margin: 10px 0;
-        }
-
-        .profile p {
-            font-size: 1rem;
-            color: #ddd;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            margin: 40px auto;
-            max-width: 1200px;
-        }
-    </style>
-</head>
-<body>
-    <!-- Floating Navigation Bar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home" class="active">🏠 Home</a></li>
-            <li><a href="#about">👤 About Me</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="home">
-        <div class="hero-content">
-            <h1>Welcome to My World</h1>
-            <p>Hi, I'm Norma Rai. A Nepali dreamer aspiring to become a coder.</p>
+<!-- About Me Section -->
+<section id="about">
+    <div class="glass-card">
+        <div class="profile">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <h2>Norma Rai</h2>
+            <p>Future Coder | Artist | Swimmer</p>
         </div>
-    </header>
+        <div class="about-content">
+            <h2>Who Am I?</h2>
+            <p>I'm Norma Rai, a proud Nepali who loves exploring creativity and learning new things. I aspire to become a coder in the future and make a positive impact through technology.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <div class="glass-card">
-            <div class="profile">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture">
-                <h2>Norma Rai</h2>
-                <p>Future Coder | Artist | Swimmer</p>
-            </div>
-            <div class="about-content">
-                <h2>Who Am I?</h2>
-                <p>I'm Norma Rai, a proud Nepali who loves exploring creativity and learning new things. I aspire to become a coder in the future and make a positive impact through technology.</p>
+<!-- Favorite Shows Section -->
+<section id="shows">
+    <h2>Favorite Shows</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180" alt="Death Note">
+            <div class="card-content">
+                <h3>Death Note</h3>
+                <p>A thrilling anime that keeps you on the edge of your seat.</p>
+                <span class="tag">Anime</span>
             </div>
         </div>
-    </section>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180" alt="Avatar: The Last Airbender">
+            <div class="card-content">
+                <h3>Avatar: The Last Airbender</h3>
+                <p>An inspiring story of balance, friendship, and adventure.</p>
+                <span class="tag">Animation</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x180" alt="Pokemon">
+            <div class="card-content">
+                <h3>Pokemon</h3>
+                <p>A nostalgic journey of friendship and battling to be the best.</p>
+                <span class="tag">Anime</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>Thank you for visiting my page! Let's connect and create something amazing together.</p>
-    </footer>
-</body>
-</html>
+<!-- Footer -->
+<footer>
+    <p>Thank you for visiting my page! Let's connect and create something amazing together.</p>
+</footer>
