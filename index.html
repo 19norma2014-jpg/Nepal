@@ -1,50 +1,143 @@
-<!-- About Me Section -->
-<section id="about">
-    <div class="glass-card">
-        <div class="profile">
-            <img src="https://via.placeholder.com/150" alt="Profile Picture">
-            <h2>Norma Rai</h2>
-            <p>Future Coder | Artist | Swimmer</p>
-        </div>
-        <div class="about-content">
-            <h2>Who Am I?</h2>
-            <p>I'm Norma Rai, a proud Nepali who loves exploring creativity and learning new things. I aspire to become a coder in the future and make a positive impact through technology.</p>
-        </div>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Norma Rai</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- Favorite Shows Section -->
-<section id="shows">
-    <h2>Favorite Shows</h2>
-    <div class="card-container">
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180" alt="Death Note">
-            <div class="card-content">
-                <h3>Death Note</h3>
-                <p>A thrilling anime that keeps you on the edge of your seat.</p>
-                <span class="tag">Anime</span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180" alt="Avatar: The Last Airbender">
-            <div class="card-content">
-                <h3>Avatar: The Last Airbender</h3>
-                <p>An inspiring story of balance, friendship, and adventure.</p>
-                <span class="tag">Animation</span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300x180" alt="Pokemon">
-            <div class="card-content">
-                <h3>Pokemon</h3>
-                <p>A nostalgic journey of friendship and battling to be the best.</p>
-                <span class="tag">Anime</span>
-            </div>
-        </div>
-    </div>
-</section>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc, #ff6ec4);
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
 
-<!-- Footer -->
-<footer>
-    <p>Thank you for visiting my page! Let's connect and create something amazing together.</p>
-</footer>
+        /* Favorite Shows Section */
+        #shows {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        #shows h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            width: 300px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        .card-content .tag {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: linear-gradient(135deg, #ff6ec4, #6a11cb);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+
+        footer p {
+            font-size: 1rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Favorite Shows Section -->
+    <section id="shows">
+        <h2>Favorite Shows</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Death Note">
+                <div class="card-content">
+                    <h3>Death Note</h3>
+                    <p>A thrilling anime that keeps you on the edge of your seat.</p>
+                    <span class="tag">Anime</span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Avatar: The Last Airbender">
+                <div class="card-content">
+                    <h3>Avatar: The Last Airbender</h3>
+                    <p>An inspiring story of balance, friendship, and adventure.</p>
+                    <span class="tag">Animation</span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Pokemon">
+                <div class="card-content">
+                    <h3>Pokemon</h3>
+                    <p>A nostalgic journey of friendship and battling to be the best.</p>
+                    <span class="tag">Anime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Thank you for visiting my page! Let's connect and create something amazing together.</p>
+    </footer>
+</body>
+</html>
