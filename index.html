@@ -49,9 +49,15 @@
             transition: all 0.3s ease;
         }
 
-        .navbar a.active, .navbar a:hover {
+        .navbar a.active {
             background: linear-gradient(135deg, #ff6ec4, #6a11cb);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a:hover {
+            background: linear-gradient(135deg, #ff6ec4, #6a11cb);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            color: #fff;
         }
 
         /* Hero Section */
@@ -128,64 +134,6 @@
             color: #ddd;
         }
 
-        /* Favorite Shows Section */
-        #shows {
-            padding: 80px 20px;
-        }
-
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            overflow: hidden;
-            width: 300px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .card-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .card-content p {
-            font-size: 1rem;
-            color: #ddd;
-        }
-
-        .card-content .tag {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 5px 10px;
-            background: linear-gradient(135deg, #ff6ec4, #6a11cb);
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: #fff;
-        }
-
         /* Footer */
         footer {
             text-align: center;
@@ -204,9 +152,6 @@
         <ul>
             <li><a href="#home" class="active">🏠 Home</a></li>
             <li><a href="#about">👤 About Me</a></li>
-            <li><a href="#shows">🎮 Games</a></li>
-            <li><a href="#favorites">⭐ Favorites</a></li>
-            <li><a href="#contact">📞 Contact</a></li>
         </ul>
     </nav>
 
@@ -215,7 +160,6 @@
         <div class="hero-content">
             <h1>Welcome to My World</h1>
             <p>Hi, I'm Norma Rai. A Nepali dreamer aspiring to become a coder.</p>
-            <button class="cta-button">Contact Me</button>
         </div>
     </header>
 
@@ -234,39 +178,8 @@
         </div>
     </section>
 
-    <!-- Favorite Shows Section -->
-    <section id="shows">
-        <h2>Favorite Shows</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="https://www.imdb.com/title/tt0877057/" alt="Death Note">
-                <div class="card-content">
-                    <h3>Death Note</h3>
-                    <p>A thrilling anime that keeps you on the edge of your seat.</p>
-                    <span class="tag">Anime</span>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://www.amazon.com/Avatar-Last-Airbender-Art-Animated/dp/1595825045" alt="Avatar: The Last Airbender">
-                <div class="card-content">
-                    <h3>Avatar: The Last Airbender</h3>
-                    <p>An inspiring story of balance, friendship, and adventure.</p>
-                    <span class="tag">Animation</span>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://nintendo.fandom.com/wiki/Pok%C3%A9mon_the_Series" alt="Pokemon">
-                <div class="card-content">
-                    <h3>Pokemon</h3>
-                    <p>A nostalgic journey of friendship and battling to be the best.</p>
-                    <span class="tag">Anime</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <p>Thank you for visiting my page! Let's connect and create something amazing together.</p>
     </footer>
 </body>
